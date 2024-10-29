@@ -1,38 +1,113 @@
-.App {
-  text-align: center;
+/* Basic resets */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: 'Titillium Web', sans-serif;
+  background-color: #171717;
+  color: #FFFFFF;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Header styles */
+.header {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #171717;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #FFFFFF;
+}
+
+.icon-button {
+  font-size: 18px;
+  color: #FFFFFF;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.search-icon{
+  margin-left:auto;
+}
+
+.search-input {
+  position:absolute;
+  font-size: 14px;
+  padding: 5px;
+  margin-left: 10px;
+  background-color: #333;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 5px;
+}
+
+/* Content flexbox styles */
+.content-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 10px;
+}
+
+/* Content item styles */
+.content-item {
+  flex: 1 1 calc(33.33% - 8px); /* Default to 3 columns */
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  text-align: center;
+  color: #FFFFFF;
 }
 
-.App-link {
-  color: #61dafb;
+.content-image {
+  width: 360px;
+  height: auto;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  border-radius: 5px;
+}
+.highlight-text{
+  background-color:yellow;
+  color: #171717;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.content-title {
+  margin-top: 4px;
+  font-size: 10px;
+}
+
+/* Responsive adjustments */
+@media (min-width: 480px) {
+  .content-title {
+    font-size: 12px;
   }
-  to {
-    transform: rotate(360deg);
+  .content-item {
+    flex: 1 1 calc(33.33% - 8px); 
+  }
+  .content-image{
+    width:100px;
+  }
+}
+@media (max-width: 480px) {
+  .content-title {
+    font-size: 12px;
+  }
+  .content-item {
+    flex: 1 1 calc(33.33% - 8px); 
+  }
+  .content-image{
+    width:100px;
+  }
+}
+
+@media (min-width: 768px) {
+  .content-item {
+    flex: 1 1 calc(33.33% - 8px); /* 3 columns for larger screens */
   }
 }
