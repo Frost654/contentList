@@ -26,7 +26,7 @@ body {
 }
 
 .icon-button {
-  font-size: 35px;
+  font-size: 18px;
   color: #FFFFFF;
   background: none;
   border: none;
@@ -85,7 +85,9 @@ body {
   text-overflow: ellipsis;
   width: 100px;
 }
-
+.back-button{
+font-size: 35px;  
+}
 /* Responsive adjustments */
 @media (min-width: 480px) {
   .content-title {

@@ -3,7 +3,7 @@ const Header = ({ searchTerm, onSearchChange }) => {
     const[visibleInput,setVisibleInput]=useState(false);
     return (
   <div className="header">
-   {visibleInput && <button className="icon-button" onClick={()=>{
+   {visibleInput && <button className="icon-button back-button" onClick={()=>{
     setVisibleInput(false);
     onSearchChange("");
     }}>←</button>
