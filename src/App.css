@@ -26,7 +26,7 @@ body {
 }
 
 .icon-button {
-  font-size: 18px;
+  font-size: 35px;
   color: #FFFFFF;
   background: none;
   border: none;
@@ -80,6 +80,10 @@ body {
 .content-title {
   margin-top: 4px;
   font-size: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100px;
 }
 
 /* Responsive adjustments */
