@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const Header = ({ searchTerm, onSearchChange,items,filteredItems }) => {
+const Header = ({ searchTerm, onSearchChange }) => {
   const [visibleInput, setVisibleInput] = useState(false);
 
   const handleBackClick = () => {
@@ -26,12 +26,12 @@ const Header = ({ searchTerm, onSearchChange,items,filteredItems }) => {
           className="search-input"
           placeholder="Search..."
           minLength={1}
-          maxLength={16}
+          maxLength={50}
           value={searchTerm}
           onChange={(e) => onSearchChange(e.target.value)}
         />
       )}
-      {visibleInput && filteredItems.length>0 && searchTerm!=='' && <span className='margin-left-40'>{filteredItems.length+"/"+items.length}</span>}
+      {visibleInput  && searchTerm!=='' && <span className='margin-left-40'>{searchTerm.length+"/"+50}</span>}
       {!visibleInput && (
         <button className="icon-button search-icon" onClick={handleSearchClick}>
           🔍
