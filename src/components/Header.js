@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const Header = ({ searchTerm, onSearchChange }) => {
   const [visibleInput, setVisibleInput] = useState(false);
@@ -31,7 +31,9 @@ const Header = ({ searchTerm, onSearchChange }) => {
           onChange={(e) => onSearchChange(e.target.value)}
         />
       )}
-      {visibleInput  && searchTerm!=='' && <span className='margin-left-40'>{searchTerm.length+"/"+50}</span>}
+      {visibleInput && searchTerm !== "" && (
+        <span className="margin-left-40">{searchTerm.length + "/" + 50}</span>
+      )}
       {!visibleInput && (
         <button className="icon-button search-icon" onClick={handleSearchClick}>
           🔍

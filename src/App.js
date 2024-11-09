@@ -5,8 +5,6 @@ import './App.css';
 
 const App = () => {
   const [searchTerm, setSearchTerm] = useState('');
-  
-
   return (
     <div>
       <Header searchTerm={searchTerm} onSearchChange={setSearchTerm}  />
